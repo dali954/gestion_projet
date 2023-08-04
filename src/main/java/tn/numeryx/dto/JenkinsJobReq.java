@@ -9,21 +9,12 @@ import lombok.ToString;
 @Data
 @NoArgsConstructor
 @ToString
-public class GitLabProjectReq {
+public class JenkinsJobReq {
 
     @JsonProperty("name")
     private String name;
 
     @JsonProperty("description")
     private String description;
-
-    @JsonProperty("path")
-    private String path;
-
-    @JsonProperty("namespace")
-    private String namespace;
-
-    @JsonProperty("initialize_with_readme")
-    private boolean initialize_with_readme;
 
 }

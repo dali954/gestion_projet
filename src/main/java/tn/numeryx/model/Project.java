@@ -11,6 +11,7 @@ import jakarta.persistence.*;
 import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Data
 @NoArgsConstructor
@@ -31,7 +32,9 @@ public class Project implements Serializable {
     @JsonProperty("description")
     private String description;
 
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private Date date_debut_project;
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private Date date_fin_project;
 
 }

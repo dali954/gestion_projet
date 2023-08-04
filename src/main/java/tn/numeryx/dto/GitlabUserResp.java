@@ -16,26 +16,25 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "GitlabProjectResp")
+@Table(name = "GitlabUserResp")
 @ToString
-public class GitlabProjectResp {
+public class GitlabUserResp {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    // @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private int gitlabId;
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private Integer id; // Identifiant généré automatiquement dans la base de données
 
     @JsonProperty("id")
-    private int Id;
+    private String gitlabId; // Identifiant de l'utilisateur dans GitLab
+
     @JsonProperty("name")
     private String name;
-    @JsonProperty("description")
-    private String description;
-    // @JsonProperty("webUrl")
-    // private String webUrl;
-    // @JsonProperty("sshUrl")
-    // private String sshUrl;
-    // @JsonProperty("httpUrl")
-    // private String httpUrl;
+
+    @JsonProperty("username")
+    private String username;
+
+    @JsonProperty("email")
+    private String email;
 
 }

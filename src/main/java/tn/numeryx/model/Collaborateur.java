@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
 @Entity
 @Table(name = "Collaborateur")
 public class Collaborateur implements Serializable {
@@ -31,5 +30,14 @@ public class Collaborateur implements Serializable {
     private String email;
     private String username;
     private String password;
+
+    // private Collaborateur(ProfilCollab profilCollab, Equipe equipe, String email,
+    // String username, String password) {
+    // this.profilCollab = profilCollab;
+    // this.equipe = equipe;
+    // this.email = email;
+    // this.username = username;
+    // this.password = password;
+    // }
 
 }
